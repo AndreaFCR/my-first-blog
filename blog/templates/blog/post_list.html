@@ -8,14 +8,13 @@
   <body>
     <header><h1>Andrea's Blog</h1></header>
     <main>
+      {% for post in posts %}
         <section>
-            <h2>mi primer post</h2>
-            <p>Fecha de la publicación</p>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>publicado: {{ post.published_date }}</p>
         </section>
-        <section>
-            <h2>mi segundo post</h2>
-            <p>Fecha de la publicación</p>
-        </section>
+      {% endfor %}
     </main>
     <footer>Creado con &#9829 por Andrea C. </footer>
   </body>
